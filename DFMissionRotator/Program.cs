@@ -10,7 +10,7 @@ namespace DFMissionRotator
     {
         //Settings
         private const string ProgramName = "Delta Force Mission Rotator";
-        private static readonly string ProgramVersion = Assembly.GetCallingAssembly().GetName().Version.Major + "." + Assembly.GetCallingAssembly().GetName().Version.Minor + "." + Assembly.GetCallingAssembly().GetName().Version.Build;
+        private static readonly string ProgramVersion = Assembly.GetCallingAssembly().GetName().Version.Major + "." + Assembly.GetCallingAssembly().GetName().Version.Minor;
 
         private static bool Debug;
 
@@ -132,7 +132,6 @@ namespace DFMissionRotator
 
                 if (folderIdList.Count == 0)
                 {
-                    
                     WriteConsole("No folders with maps were found. Cannot continue.", true, ConsoleColor.Red);
                     WriteConsole("Add some maps to the folders and run this app again.", true, ConsoleColor.Red);
                     WriteConsole(null);
@@ -162,7 +161,6 @@ namespace DFMissionRotator
                     WriteConsole(null);
                     WriteConsole(null);
                     WriteConsole("Select another ID? [y/n]: ", false);
-
 
                     if (Console.ReadKey().Key != ConsoleKey.Y)
                     {

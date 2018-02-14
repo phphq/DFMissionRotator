@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Novahq.net")]
 [assembly: AssemblyProduct("DFMissionRotator")]
-[assembly: AssemblyCopyright("Copyright(c)  2017 Scott Lucht")]
+[assembly: AssemblyCopyright("(c) Scott Lucht <Novahq.net>")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
