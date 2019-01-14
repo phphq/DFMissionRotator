@@ -10,7 +10,7 @@ namespace DFMissionRotator
     {
         //Settings
         private const string ProgramName = "Delta Force Mission Rotator";
-        private static readonly string ProgramVersion = Assembly.GetCallingAssembly().GetName().Version.Major + "." + Assembly.GetCallingAssembly().GetName().Version.Minor;
+        private static readonly string ProgramVersion = Assembly.GetCallingAssembly().GetName().Version.Major + "." + Assembly.GetCallingAssembly().GetName().Version.Minor + " (2019/1/14)";
 
         private static bool Debug;
 
@@ -44,7 +44,7 @@ namespace DFMissionRotator
 
                 #region Intro Text
                 WriteConsole(ProgramTitle, true, ConsoleColor.DarkGray);
-                WriteConsole("     " + ProgramName + " v" + ProgramVersion + " by <" + NovaHq + ">", true, ConsoleColor.DarkGray);
+                WriteConsole("   " + ProgramName + " v" + ProgramVersion + " by <" + NovaHq + ">", true, ConsoleColor.DarkGray);
                 WriteConsole("         Rotates mission files for DF2, LW and TFD", true, ConsoleColor.DarkGray);
                 WriteConsole("           Press CTRL+C anytime to exit this app", true, ConsoleColor.DarkGray);
                 WriteConsole("---------------------------------------------------------------------", true, ConsoleColor.DarkGray);
@@ -56,7 +56,6 @@ namespace DFMissionRotator
                 WriteConsole("This app will NEVER remove a map from the nhqMR-# folders!");
                 WriteConsole("Have you backed up all the maps in your games folder? [y/n]: ", false);
 
-                
                 var introKey = Console.ReadKey().Key;
 
                 if (introKey != ConsoleKey.Y && introKey != ConsoleKey.N)
