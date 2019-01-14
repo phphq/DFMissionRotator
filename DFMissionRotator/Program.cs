@@ -38,6 +38,8 @@ namespace DFMissionRotator
 
             while (true)
             {
+                Intro:
+
                 Console.Clear();
 
                 #region Intro Text
@@ -54,13 +56,22 @@ namespace DFMissionRotator
                 WriteConsole("This app will NEVER remove a map from the nhqMR-# folders!");
                 WriteConsole("Have you backed up all the maps in your games folder? [y/n]: ", false);
 
-                if (Console.ReadKey().Key != ConsoleKey.Y)
+                
+                var introKey = Console.ReadKey().Key;
+
+                if (introKey != ConsoleKey.Y && introKey != ConsoleKey.N)
+                    goto Intro;
+
+                if (introKey != ConsoleKey.Y)
                 {
                     WriteConsole(null);
                     WriteConsole(null);
                     WriteConsole("Backup your maps and run this program again.", true, ConsoleColor.Red);
 
                     WriteConsole(null);
+
+                    WaitingDots(250, ConsoleColor.Black, true);
+ 
                     ExitApp(0, true);
                 }
                 #endregion
